@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add account</title>
+</head>
+<body>
+<h1>Add account</h1>
+    <form method="post" action="/"> {% csrf_token %}
+        {% if form != None %}
+            {{ form.as_p }}
+        {% endif %}
+    <input type="submit" value="Add" class="btn" />
+    </form>
+    {% for el in accList %}
+        <li><a href="./charges_page/{{el.0}}/">id = {{el.0}}, total = {{el.1}}</a></li>
+    {% endfor %}
+</body>
+</html>

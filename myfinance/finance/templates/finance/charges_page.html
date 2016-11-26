@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Charges</h1>
+     <form method="post" action="./"> {% csrf_token %}
+        {% if form != None %}
+            <p>value: {{ form.value }}</p>
+            <p>date:  {{ form.date }}</p>
+        {% endif %}
+    <input type="submit" value="Add transaction" class="btn" />
+    </form>
+    {% for el in charges %}
+        <li>{{ el }}</li>
+    {% endfor %}
+    <p><a href="/">AllAccounts</a></p>
+</body>
+</html>
