@@ -6,6 +6,8 @@ from finance.forms import AccountModel
 from django import forms
 from datetime import *
 from decimal import Decimal
+from django.db import transaction
+import operator
 
 
 # view which allows to add accounts and which outputs the list of accounts from database
@@ -43,6 +45,7 @@ def checkId(id, list):
 
 # view which allows to transaction and which outputs the list of transactions of definite account from database
 # if parameters are wrong then nothing will change
+@transaction.atomic(savepoint=False)
 def make_transaction(request, accId):
     form = ChargeForm()
     charges = []
@@ -66,3 +69,18 @@ def make_transaction(request, accId):
     context = {"form": form, "charges": charges, "accId": accId}
     return render(request, 'finance/charges_page.html', context)
 
+
+def show_statistics(request, accId):
+    charges = []
+    monthsNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    months = [0,0,0,0,0,0,0,0,0,0,0,0]
+    for ch in ChargeModel.objects.filter(account=accId):
+        charges.append(ch)
+    for el in charges:
+        mth = el.date.month
+        months[mth-1] = months[mth-1] + el.value
+    monthsDict = []
+    for i in range(12):
+        monthsDict.append((monthsNames[i], months[i]));
+    context = {"monthsDict": monthsDict, "accId": accId}
+    return render(request, 'finance/statistics.html', context)

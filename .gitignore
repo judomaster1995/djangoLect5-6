@@ -1,0 +1,4 @@
+./myfinance/__pycache__/
+./myfinance/idea/
+./myfinance/migrations/
+./myfinance/db.sqlite3
