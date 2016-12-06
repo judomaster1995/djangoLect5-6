@@ -1,7 +1,7 @@
 from django import forms
 from datetime import *
 from decimal import Decimal
-from finance.models import ChargeModel, AccountModel
+from finance.models import ChargeModel, AccountModel, UserProfile
 
 
 # form for charges
@@ -48,7 +48,7 @@ class ChargeForm(forms.ModelForm):
 class AccountForm(forms.ModelForm):
     class Meta:
         model = AccountModel
-        fields = ['id', 'total']
+        fields = ['id', 'total','userid']
 
     # overridden function clean() which responses for validation
     def clean(self):
@@ -61,3 +61,10 @@ class AccountForm(forms.ModelForm):
         if Decimal(cleaned_data.get('total')) < 0:
             print('wrong total')
             self.add_error('total', 'total is negative')
+
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['phone_number', 'address', 'user']

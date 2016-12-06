@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+    <p>Hello {{ user }}</p>
+    {% if info != None %}
+        <p>Number: {{ info.0 }}</p>
+        <p>Address:  {{ info.1 }}</p>
+    {% endif %}
+    <form action="./" method="POST">{% csrf_token %}
+        <p class="text">Write number and address to update</p>
+            {% if form != None %}
+                <p>Number: {{ form.phone_number }}</p>
+                <p>Address: {{ form.address }}</p>
+            {% endif %}
+        <input type="submit" value="Send" />
+    </form>
+
+    <a href="./{{userid}}/">To Accounts</a>
+    <a href="/logout/">Logout</a>
+</body>
+</html>

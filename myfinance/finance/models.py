@@ -1,13 +1,24 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # Create your models here.
 
+class UserProfile(models.Model):
+    phone_number = models.CharField(max_length=16)
+    address = models.CharField(max_length=40)
+    user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'userprofiles'
+
+
 class AccountModel(models.Model):
     id = models.CharField(max_length=5, primary_key=True)
     total = models.DecimalField(max_digits=10, decimal_places=2)
+    userid = models.ForeignKey(UserProfile, related_name='useraccount', on_delete=models.CASCADE)
 
-    def __unicode__(self):
+    def __str__(self):
         return "charges = {0}, total = {1}".format(self.id, self.total)
 
     class Meta:
