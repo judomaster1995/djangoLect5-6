@@ -15,7 +15,11 @@ class UserProfile(models.Model):
 
 class AccountModel(models.Model):
     id = models.CharField(max_length=5, primary_key=True)
-    total = models.DecimalField(max_digits=10, decimal_places=2)
+    total = models.DecimalField(max_digits=10, decimal_places=2)#amount
+
+    # number = models.IntegerField(max_digits=5)
+    # owner = models.CharField(max_length=5, primary_key=False)
+
     userid = models.ForeignKey(UserProfile, related_name='useraccount', on_delete=models.CASCADE)
 
     def __str__(self):

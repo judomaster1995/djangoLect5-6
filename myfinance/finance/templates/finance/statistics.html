@@ -7,13 +7,15 @@
 <body>
     <table border="1" width="50%" cellpadding="5">
         <tr>
+            <th>Year</th>
             <th>Month</th>
             <th>Overall</th>
         </tr>
-        {% for el in monthsDict %}
+        {% for el in monthallstat %}
             <tr>
                 <td>{{ el.0 }}</td>
                 <td>{{ el.1 }}</td>
+                <td>{{ el.2 }}</td>
             </tr>
         {% endfor %}
     </table>

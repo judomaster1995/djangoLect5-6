@@ -13,6 +13,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.messages import error
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.db.models.functions import Extract
+from django.db.models import Sum
 from django.contrib.auth.decorators import permission_required
 from django.contrib.auth.models import PermissionDenied
 from django.contrib.auth.models import Permission
@@ -140,17 +142,26 @@ def make_transaction(request, userid, accId):
 
 @login_required
 def show_statistics(request, userid, accId):
-    charges = []
-    monthsNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
-                   "November", "December"]
-    months = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    for ch in ChargeModel.objects.filter(account=accId):
-        charges.append(ch)
-    for el in charges:
-        mth = el.date.month
-        months[mth - 1] = months[mth - 1] + el.value
-    monthsDict = []
-    for i in range(12):
-        monthsDict.append((monthsNames[i], months[i]))
-    context = {"monthsDict": monthsDict,"userid": userid, "accId": accId}
+    months_params = ChargeModel.objects\
+            .filter(account=accId)\
+            .annotate(year=Extract('date', 'year'), month=Extract('date', 'month'))\
+            .order_by('year', 'month')\
+            .values('year', 'month')
+    monthallstat = []
+    i=0
+    while i<len(months_params):
+        el = months_params[i]
+        i+=1
+        val = ChargeModel.objects\
+            .filter(account=accId)\
+            .annotate(year=Extract('date', 'year'), month=Extract('date', 'month'))\
+            .filter(year=el['year'])\
+            .filter(month=el['month'])\
+            .order_by('year', 'month')\
+            .values('year', 'month')\
+            .aggregate(summary=Sum('value'))
+        monthallstat.append((el['year'],el['month'],val['summary']))
+
+    print(monthallstat)
+    context = {"monthallstat":monthallstat,"userid": userid, "accId": accId}
     return render(request, 'finance/statistics.html', context)

@@ -13,6 +13,8 @@
         {% endif %}
     <input type="submit" value="Add" class="btn" />
     </form>
+
+    <p><a href="./{{accountId}}">To amount</a></p>
     <p><a href="/profile/">To Profile</a></p>
     {% for el in accList %}
         <li><a href="./charges_page/{{el.0}}/">id = {{el.0}}, total = {{el.1}}</a></li>
