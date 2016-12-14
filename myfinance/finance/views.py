@@ -140,6 +140,7 @@ def make_transaction(request, userid, accId):
     context = {"form": form, "charges": charges, "userid": userid, "accId": accId}
     return render(request, 'finance/charges_page.html', context)
 
+
 @login_required
 def show_statistics(request, userid, accId):
     months_params = ChargeModel.objects\

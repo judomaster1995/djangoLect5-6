@@ -20,13 +20,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/finance/views.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/finance/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="153" column="12" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
+            <state relative-caret-position="425">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -62,24 +62,27 @@
         <option value="$PROJECT_DIR$/finance/templates/finance/entersystem.html" />
         <option value="$PROJECT_DIR$/finance/templates/finance/login.html" />
         <option value="$PROJECT_DIR$/finance/templates/finance/login_page.html" />
-        <option value="$PROJECT_DIR$/finance/forms.py" />
         <option value="$PROJECT_DIR$/finance/templates/finance/charges_page.html" />
         <option value="$PROJECT_DIR$/finance/models.py" />
         <option value="$PROJECT_DIR$/finance/templates/finance/accountAmount.html" />
         <option value="$PROJECT_DIR$/finance/templates/finance/add_account.html" />
         <option value="$PROJECT_DIR$/finance/templates/finance/profile.html" />
-        <option value="$PROJECT_DIR$/finance/urls.py" />
         <option value="$PROJECT_DIR$/myfinance/urls.py" />
         <option value="$PROJECT_DIR$/myfinance/settings.py" />
         <option value="$PROJECT_DIR$/finance/templates/finance/statistics.html" />
         <option value="$PROJECT_DIR$/finance/views.py" />
+        <option value="$PROJECT_DIR$/finance/api/urls.py" />
+        <option value="$PROJECT_DIR$/finance/forms.py" />
+        <option value="$PROJECT_DIR$/finance/api/serializers.py" />
+        <option value="$PROJECT_DIR$/finance/urls.py" />
+        <option value="$PROJECT_DIR$/finance/api/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -107,6 +110,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -175,10 +180,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfinance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myfinance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="finance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,10 +383,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24479167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24474475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -407,27 +428,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/finance/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finance/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finance/templates/finance/add_account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finance/templates/finance/add_account.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -593,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finance/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myfinance/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -608,13 +601,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/finance/templates/finance/accountAmount.html" />
-    <entry file="file://$PROJECT_DIR$/finance/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finance/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -647,35 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <marker date="1481230284463" expanded="true" signature="31:627" ph="..." />
-            <marker date="1481230284463" expanded="true" signature="38:104" ph="..." />
-            <marker date="1481230284463" expanded="true" signature="111:619" ph="..." />
-            <marker date="1481230284463" expanded="true" signature="169:380" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finance/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding>
-            <marker date="1481480962188" expanded="true" signature="0:270" ph="import ..." />
-            <marker date="1481480962188" expanded="true" signature="288:625" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myfinance/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding>
-            <marker date="1481535432509" expanded="true" signature="0:642" ph="&quot;&quot;&quot;myfinance URL Configuration...&quot;&quot;&quot;" />
-            <marker date="1481535432509" expanded="false" signature="643:717" ph="import ..." />
-            <marker date="1481535432509" expanded="true" signature="733:896" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -683,52 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
-          <folding>
-            <marker date="1481535572276" expanded="true" signature="0:311" ph="&quot;&quot;&quot;Django settings for myfinance project....&quot;&quot;&quot;" />
-            <marker date="1481535572276" expanded="true" signature="469:672" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="885:1109" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="1147:1529" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="1187:1255" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="1293:1352" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="1386:1436" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="1472:1526" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="1546:1943" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="1992:2461" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="1998:2458" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="2135:2451" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="2171:2440" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="2514:2589" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="2604:2917" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="2621:2915" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="2813:2910" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="2921:3022" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="3052:3446" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="3058:3155" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="3163:3250" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="3258:3346" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="3354:3443" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="3450:3526" ph="..." />
-            <marker date="1481535572276" expanded="true" signature="3622:3723" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finance/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding>
-            <marker date="1481228513829" expanded="false" signature="0:72" ph="import ..." />
-            <marker date="1481228513829" expanded="true" signature="135:371" ph="..." />
-            <marker date="1481228513829" expanded="true" signature="337:371" ph="..." />
-            <marker date="1481228513829" expanded="true" signature="407:893" ph="..." />
-            <marker date="1481228513829" expanded="true" signature="543:651" ph="..." />
-            <marker date="1481228513829" expanded="true" signature="774:846" ph="..." />
-            <marker date="1481228513829" expanded="true" signature="863:893" ph="..." />
-            <marker date="1481228513829" expanded="true" signature="928:1259" ph="..." />
-            <marker date="1481228513829" expanded="true" signature="1142:1213" ph="..." />
-            <marker date="1481228513829" expanded="true" signature="1230:1259" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,23 +647,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <marker date="1481551901783" expanded="true" signature="31:642" ph="..." />
-            <marker date="1481551901783" expanded="true" signature="38:103" ph="..." />
-            <marker date="1481551901783" expanded="true" signature="110:634" ph="..." />
-            <marker date="1481551901783" expanded="true" signature="161:484" ph="..." />
-            <marker date="1481551901783" expanded="true" signature="174:270" ph="..." />
-            <marker date="1481551901783" expanded="true" signature="324:450" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myfinance/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance/api/urls.py" />
     <entry file="file://$PROJECT_DIR$/finance/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="153" column="12" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance/api/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
